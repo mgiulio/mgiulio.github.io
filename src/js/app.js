@@ -91,6 +91,22 @@ function showProjectDetails(e) {
 	while (!target.classList.contains('item'))
 		target = target.parentNode; // check for uncatched clicks
 	
+	// Start activity indicator
+	
+	// Fetch details data
+	
+	function ok(detailsData) {
+		var markup = tmpl['project-details'](detailsData); // cache it?
+		domNodes.details.innerHTML = markup;
+		
+		// Start expand transittion
+	}
+	
+	function ko() {
+	}
+	
+	return;
+	
 	//target.classList.add('details');
 	
 	// Assign to article node the top&friend values of the clicked prj

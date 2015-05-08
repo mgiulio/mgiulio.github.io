@@ -127,7 +127,6 @@ function showProjectDetails(e) {
 		domNodes.mask.addEventListener('transitionend', f, false);
 		
 		function f(e) {
-			console.log(f);
 			domNodes.mask.removeEventListener('transitionend', f, false);
 			
 			domNodes.projects.style.display = 'none';
@@ -135,7 +134,9 @@ function showProjectDetails(e) {
 			
 			domNodes.mask.addEventListener('transitionend', displayNone, false);
 			domNodes.mask.style.opacity = 0;
-			function displayNone() {
+			function displayNone(e) {
+				if (e.propertyName !== 'opacity')
+					return;
 				domNodes.mask.removeEventListener('transitionend', displayNone, false);
 				domNodes.mask.style.display = 'none';
 			}

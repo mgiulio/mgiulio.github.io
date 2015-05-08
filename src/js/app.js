@@ -84,6 +84,10 @@ function showProjectDetails(e) {
 	e.stopPropagation();
 	
 	var target = e.target;
+	
+	if (target === domNodes.projects)
+		return;
+	
 	while (!target.classList.contains('item'))
 		target = target.parentNode; // check for uncatched clicks
 	

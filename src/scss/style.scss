@@ -87,7 +87,7 @@ body {
 			right $transition-time linear,
 			top $transition-time linear,
 			bottom $transition-time linear,
-			opacity 2s linear
+			opacity $transition-time linear
 		;
 		
 		background-color: #fff;

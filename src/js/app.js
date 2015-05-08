@@ -138,7 +138,8 @@ function showProjectDetails(e) {
 				if (e.propertyName !== 'opacity')
 					return;
 				domNodes.mask.removeEventListener('transitionend', displayNone, false);
-				domNodes.mask.style.display = 'none';
+				//domNodes.mask.style.display = 'none';
+				domNodes.mask.style.visibility = 'hidden';
 			}
 		}
 	}
@@ -147,22 +148,30 @@ function showProjectDetails(e) {
 function hideProjectDetails(e) {
 	e.stopPropagation();
 	
-	domNodes.mask.addEventListener('transitionend', contract, false);
+	//domNodes.mask.style.display = 'block';
+	domNodes.mask.style.visibility = 'visible';
 	
-	domNodes.mask.style.display = 'block';
+	domNodes.mask.addEventListener('transitionend', contract, false);
 	domNodes.mask.style.opacity = 1;
 	
-	contract();
-	
-	function contract() {
-		console.log('contract');
-		
+	function contract(e) {
 		domNodes.mask.removeEventListener('transitionend', contract, false);
 		
+		domNodes.article.style.display = 'none';
+		domNodes.projects.style.display = 'flex';
+		
+		domNodes.mask.addEventListener('transitionend', hideMask, false);
 		domNodes.mask.style.left = domNodes.mask.dataset.left;
 		domNodes.mask.style.right = domNodes.mask.dataset.right;
 		domNodes.mask.style.top = domNodes.mask.dataset.top;
 		domNodes.mask.style.bottom = domNodes.mask.dataset.bottom;
+		
+		function hideMask(e) {
+			domNodes.mask.removeEventListener('transitionend', hideMask, false);
+			
+			domNodes.mask.style.display = 'none';
+			//domNodes.mask.style.visibility = 'hidden';
+		}
 	}
 	
 }

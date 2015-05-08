@@ -1,0 +1,84 @@
+.item {
+
+	overflow: hidden;
+
+	padding: 0px;
+
+	background-color: #f2f2f2;
+	border: 1px solid #d3d3d3;
+	color: #666;
+
+	.title {
+		margin: 0;
+		padding: 20px 10px;
+		text-align: center;
+		
+		font-family: Oswald;
+		text-transform: uppercase;
+		font-size: 20px;
+		letter-spacing: 1px;
+		
+		$stripe-1-width: 3px;
+		$stripe-2-width: $stripe-1-width;
+		$stripe-1-col: rgba(150,150,150, 0.1);
+		$stripe-2-col: transparent;
+		$angle: 135deg;
+		$l: 1.4142135623730951 * ($stripe-1-width + $stripe-2-width);
+		$p0: 0;
+		$p1: $p0 + $stripe-1-width;
+		$p2: $p1 + $stripe-2-width;
+		$p3: $p2 + $stripe-1-width;
+		$p4: $p3 + $stripe-2-width;
+		
+		//background: url(../img/diag-patt.png);
+		background-image: linear-gradient($angle, 
+			$stripe-1-col $p0, $stripe-1-col $p1,
+			$stripe-2-col $p1, $stripe-2-col $p2,		
+			$stripe-1-col $p2, $stripe-1-col $p3,		
+			$stripe-2-col $p3, $stripe-2-col $p4
+		);
+		background-size: $l $l;
+		
+		color: #ee4c54;
+		text-shadow: 2px 2px 0px rgba(255,255,255,1), 2px 2px 2px rgba(0,0,0,0.5);
+	}
+
+	.description {
+		margin: 0;
+		margin-top: 20px;
+		
+		text-align: center;
+		
+		font-family: 'Noto Serif', Georgia, serif;
+		font-size: 14px;
+	}
+
+	.language {
+		margin: 0;
+		margin-top: 
+			auto
+			//20px
+		;
+		
+		width: 50%;
+		border: 1px solid #e7d6d6;			
+		padding: 10px 20px;
+		background-color: #fff;
+		background-origin: content-box;
+		background-position: 0 0;
+		/* background-size: cover; */ // the default 'auto' value is ok because resolves to 'cover'
+		background-repeat: no-repeat;
+		background-image: linear-gradient(orange, orange);
+		
+		font-family: sans-serif;
+		font-size: 12px;
+		text-transform: uppercase;
+		
+		color: #f6f6f6;
+	}
+
+	.meta {
+		margin: 0;
+		margin-top: 20px;
+	}
+}

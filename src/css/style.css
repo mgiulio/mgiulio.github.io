@@ -432,6 +432,8 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+}
+.projects .items .item {
   overflow: hidden;
   padding: 0px;
   background-color: #f2f2f2;

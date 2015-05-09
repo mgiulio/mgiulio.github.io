@@ -63,6 +63,10 @@ function pluck(repo) {
 }
 
 function setupTemplating() {
+	Handlebars.registerHelper('toLowerCase', function(str) {
+		return str.toLowerCase();
+	});
+	
 	var templateNodes = document.querySelectorAll('[type="text/x-handlebars-template"]');
 	toArray(templateNodes).forEach(function(domNode) {
 		var tmplName = domNode.id.slice(5);

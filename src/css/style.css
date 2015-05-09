@@ -475,6 +475,18 @@ body {
   box-shadow: 0 0 1px 1px #e7d6d6;
   color: #f6f6f6;
 }
+.projects .items .item.html .language {
+  background-color: #fed652;
+}
+.projects .items .item.css .language {
+  background-color: #ee9499;
+}
+.projects .items .item.javascript .language {
+  background-color: #eebe94;
+}
+.projects .items .item.php .language {
+  background-color: #d9e1a1;
+}
 .projects .items .item .meta {
   margin: 0;
   margin-top: auto;

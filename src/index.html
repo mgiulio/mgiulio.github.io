@@ -2229,7 +2229,7 @@
 	
 	<script id="tmpl-project-tease" type="text/x-handlebars-template">
 		{{#each this}}
-			<li class="item{{#if this.isFork}} fork{{/if}}">
+			<li class="item{{#if this.mainLanguage}} {{toLowerCase this.mainLanguage}}{{/if}}{{#if this.isFork}} fork{{/if}}">
 				<h2 class="title">{{this.name}}</h2>
 				<p class="description">{{this.description}}</p>
 				<p class="language">{{this.mainLanguage}}</p>

@@ -70,6 +70,19 @@
 		
 		color: #f6f6f6;
 	}
+		
+	&.html .language {
+		background-color: #fed652;
+	}
+	&.css  .language {
+		background-color: #ee9499;
+	}
+	&.javascript .language {
+		background-color: #eebe94;
+	}
+	&.php .language {
+		background-color: #d9e1a1;
+	}
 
 	.meta {
 		margin: 0;

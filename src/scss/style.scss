@@ -73,32 +73,6 @@ body {
 		}
 		@import 'item-inner';
 	}
-	
-	.details {
-		display: none;
-		background-color: #fff;
-	}
-	
-	#mask {
-		position: absolute;
-		width: auto;
-		height: auto;
-		margin: 0;
-		
-		$transition-time: 0.5s;
-		transition:
-			left $transition-time linear, 
-			right $transition-time linear,
-			top $transition-time linear,
-			bottom $transition-time linear,
-			opacity $transition-time linear
-		;
-		
-		background-color: #fff;
-		opacity: 1;
-		
-		display: none;
-	}
 }
 
 footer  {

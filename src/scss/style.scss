@@ -43,6 +43,16 @@ body {
 	//padding: 10px;
 	position: relative;
 	
+	.github-link {
+		display: block;
+		margin: 20px 0;
+		text-align: center;
+		
+		img {
+			width: 80px;
+		}
+	}
+	
 	.items {
 		list-style: none;
 		margin: 0;

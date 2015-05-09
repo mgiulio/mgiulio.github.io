@@ -47,7 +47,7 @@ function processRepos(data) {
 		
 	var markup = tmpl['projects']({projects: projects});
 		
-	domNodes.projectsSection.innerHTML = markup;
+	domNodes.projectsSection.innerHTML += markup;
 }
 
 function pluck(repo) {

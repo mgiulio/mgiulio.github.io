@@ -413,6 +413,14 @@ body {
   background-position: -2px -2px, -2px -2px;
   position: relative;
 }
+.projects .github-link {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+.projects .github-link img {
+  width: 80px;
+}
 .projects .items {
   list-style: none;
   margin: 0;

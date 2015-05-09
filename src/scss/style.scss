@@ -66,6 +66,10 @@ body {
 			display: flex;
 			flex-direction: column;
 			flex-wrap: nowrap;
+			
+			.language {
+				align-self: center;
+			}
 		}
 		@import 'item-inner';
 	}

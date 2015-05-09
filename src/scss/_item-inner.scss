@@ -58,19 +58,15 @@
 	.language {
 		margin: 20px 0;
 		
-		width: 50%;
-		border: 1px solid #e7d6d6;			
-		padding: 10px 20px;
-		background-color: #fff;
-		background-origin: content-box;
-		background-position: 0 0;
-		/* background-size: cover; */ // the default 'auto' value is ok because resolves to 'cover'
-		background-repeat: no-repeat;
-		background-image: linear-gradient(orange, orange);
-		
 		font-family: sans-serif;
 		font-size: 12px;
 		text-transform: uppercase;
+		
+		padding: 10px 20px;
+		
+		background-color: orange;
+		border: 2px solid white;
+		box-shadow: 0 0 1px 1px #e7d6d6;
 		
 		color: #f6f6f6;
 	}

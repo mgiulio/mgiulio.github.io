@@ -433,6 +433,9 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
 }
+.projects .items .item .language {
+  align-self: center;
+}
 .projects .items .item {
   overflow: hidden;
   padding: 0px;
@@ -463,18 +466,13 @@ body {
 }
 .projects .items .item .language {
   margin: 20px 0;
-  width: 50%;
-  border: 1px solid #e7d6d6;
-  padding: 10px 20px;
-  background-color: #fff;
-  background-origin: content-box;
-  background-position: 0 0;
-  /* background-size: cover; */
-  background-repeat: no-repeat;
-  background-image: linear-gradient(orange, orange);
   font-family: sans-serif;
   font-size: 12px;
   text-transform: uppercase;
+  padding: 10px 20px;
+  background-color: orange;
+  border: 2px solid white;
+  box-shadow: 0 0 1px 1px #e7d6d6;
   color: #f6f6f6;
 }
 .projects .items .item .meta {

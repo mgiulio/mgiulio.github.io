@@ -420,11 +420,17 @@ body {
 }
 .projects .github-link {
   display: block;
-  margin: 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-top: 20px;
   text-align: center;
 }
 .projects .github-link img {
   width: 80px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid #CBCBCB;
 }
 .projects.activity .github-link img {
   animation: spin 1s infinite linear;

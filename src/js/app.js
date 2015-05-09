@@ -51,7 +51,7 @@ function processRepos(data) {
 		
 	domNodes.projectsSection.innerHTML += markup;
 	
-	//domNodes.projectsSection.classList.remove('activity');
+	domNodes.projectsSection.classList.remove('activity');
 }
 
 function pluck(repo) {

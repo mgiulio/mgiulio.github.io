@@ -2,6 +2,7 @@ $left-panel-width: 250px;
 
 @import 'normalize';
 @import 'color';
+@import 'anims';
 
 body {
 	background-color: $bg-col;
@@ -51,6 +52,10 @@ body {
 		img {
 			width: 80px;
 		}
+	}
+	
+	&.activity .github-link img {
+		animation: spin 1s infinite linear;
 	}
 	
 	.items {

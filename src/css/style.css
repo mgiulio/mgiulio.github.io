@@ -396,6 +396,11 @@ th {
   padding: 0;
 }
 
+@keyframes spin {
+  to {
+    transform: rotateY(360deg);
+  }
+}
 body {
   background-color: #e7e7e7;
 }
@@ -420,6 +425,9 @@ body {
 }
 .projects .github-link img {
   width: 80px;
+}
+.projects.activity .github-link img {
+  animation: spin 1s infinite linear;
 }
 .projects .items {
   list-style: none;

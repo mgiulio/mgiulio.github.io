@@ -21,13 +21,15 @@ function init() {
 }
 
 function fetchRepos() {
+	domNodes.projectsSection.classList.add('activity');
+	
 	var ghUrl = domNodes.projectsSection.querySelector('.github-link').href;
 	var username = ghUrl.substr(ghUrl.lastIndexOf('/') + 1);
 	
 	var script = document.createElement('script');
 	script.src = 
-		//'repos.js'
-		`https://api.github.com/users/${username}/repos?callback=jsonPCallback`
+		'repos.js'
+		//`https://api.github.com/users/${username}/repos?callback=jsonPCallback`
 	;
 	document.getElementsByTagName('head')[0].appendChild(script);
 }
@@ -48,6 +50,8 @@ function processRepos(data) {
 	var markup = tmpl['projects']({projects: projects});
 		
 	domNodes.projectsSection.innerHTML += markup;
+	
+	//domNodes.projectsSection.classList.remove('activity');
 }
 
 function pluck(repo) {

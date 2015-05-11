@@ -37,10 +37,22 @@
 					<p class="description">{{this.description}}</p>
 					<p class="language">{{this.mainLanguage}}</p>
 					<p class="meta">
-						<span class="time creation">{{this.creationTime}}</span>
-						<span class="forks-count">{{this.forks}}</span>
-						<span class="stars">{{this.stars}}</span>
-						<span class="watchers">{{this.watchers}}</span>
+						<span class="timestamp creation">
+							<svg role="img" title="Creation time" class="icon"><use xlink:href="img/sprite.svg#clock" /></svg>
+							{{date this.creationTime}}
+						</span>
+						<span class="counter forks">
+							<svg role="img" title="Forks" class="icon"><use xlink:href="img/sprite.svg#fork" /></svg>
+							{{this.forks}}
+						</span>
+						<span class="counter stars">
+							<svg role="img" title="Starred" class="icon"><use xlink:href="img/sprite.svg#star" /></svg>
+							{{this.stars}}
+						</span>
+						<span class="counter watchers">
+							<svg role="img" title="Watchers" class="icon"><use xlink:href="img/sprite.svg#eye" /></svg>
+							{{this.watchers}}
+						</span>
 					</p>
 				</li>
 			{{/each}}

@@ -512,6 +512,29 @@ body {
 .projects .items .item .meta {
   margin: 0;
   margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  font-family: monospace;
+  font-size: 12px;
+  color: #aaa;
+}
+.projects .items .item .meta span {
+  margin: 0 5px;
+}
+.projects .items .item .meta .creation {
+  margin-right: auto;
+  word-spacing: -2px;
+}
+.projects .items .item .meta span .icon {
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  fill: #aaa;
+}
+.projects .items .item .meta span.forks .icon {
+  width: 16px;
+  height: 16px;
 }
 
 footer {

@@ -87,5 +87,40 @@
 	.meta {
 		margin: 0;
 		margin-top: auto;
+		
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		
+		font-family: 
+			monospace
+			//'Noto Serif'
+		;
+		font-size: 12px;
+		color: #aaa;
+		
+		span {
+			margin: 0 5px;
+		}
+		
+		.creation {
+			margin-right: auto;
+			word-spacing: -2px;
+		}
+		
+		span .icon {
+			vertical-align: middle;
+			width: 18px;
+			height: 18px;
+			fill: 
+				#aaa
+				//#b3b3b3
+			;
+		}
+		span.forks .icon {
+			width: 16px;
+			height: 16px;
+		}
+		
 	}
 }

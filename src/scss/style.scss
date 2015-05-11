@@ -1,4 +1,5 @@
 $left-panel-width: 250px;
+$breakpoint: 550px;
 
 @import 'normalize';
 @import 'color';
@@ -9,6 +10,15 @@ body {
 }
 
 .about {
+	@media screen and (min-width: $breakpoint) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		box-sizing: border-box;
+		width: $left-panel-width;
+		height: 100%;
+	}
+	
 	text-align: center;
 	padding: 10px;
 	
@@ -17,6 +27,11 @@ body {
 }
 
 .projects {
+	@media screen and (min-width: $breakpoint) {
+		margin: 0;
+		margin-left: $left-panel-width;
+	}
+		
 	// Adapted from http://lea.verou.me/css3patterns/#blueprint-grid
 	//background-color: $grid-bg;
 	$grid-bg: rgba(0,0,0, 0);
@@ -96,63 +111,4 @@ body {
 	}
 }
 
-footer  {
-	padding: 5px;
-	
-	font-family: 'Oswald';
-	text-transform: uppercase;
-	font-size: 10px;
-	letter-spacing: 1px;
-	
-	background-color: #f2f2f2;
-	border-top: 1px solid #ddd;
-	color: #6b6b6b;
-	
-	a {
-		color: #6b6b6b;
-	}
-	a:hover {
-		color: #ffffff;
-	}
-	
-	p {
-		text-align: center;
-		margin: 0.5em 0;
-	}
-	p:first-of-type {
-		margin-top: 0;
-	}
-	p:last-of-type {
-		margin-bottom: 0;
-	}
-	
-	p.credits .hearts {
-		font-style: normal;
-		color: #ef4d4d;
-		transition: color 0.3s ease-in;
-	}
-	p.credits .hearts:hover {
-		color: #ff0000;
-	}
-}
-
-@media screen and (min-width: 550px) {
-	.about {
-		position: fixed;
-		left: 0;
-		top: 0;
-		box-sizing: border-box;
-		width: $left-panel-width;
-		height: 100%;
-	}
-	
-	.projects {
-		margin: 0;
-		margin-left: $left-panel-width;
-	}
-	
-	footer {
-		margin-left: $left-panel-width;
-		//background-color: transparent;
-	}
-}
+@import 'footer';

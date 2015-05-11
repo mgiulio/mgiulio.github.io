@@ -411,12 +411,28 @@ body {
   background: #333;
   color: #aaa;
 }
+@media screen and (min-width: 550px) {
+  .about {
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 250px;
+    height: 100%;
+  }
+}
 
 .projects {
   background-image: linear-gradient(#e2e2e2 2px, transparent 2px), linear-gradient(90deg, #e2e2e2 2px, transparent 2px);
   background-size: 50px 50px, 50px 50px;
   background-position: -2px -2px, -2px -2px;
   position: relative;
+}
+@media screen and (min-width: 550px) {
+  .projects {
+    margin: 0;
+    margin-left: 250px;
+  }
 }
 .projects .github-link {
   display: block;
@@ -552,6 +568,11 @@ footer {
   border-top: 1px solid #ddd;
   color: #6b6b6b;
 }
+@media screen and (min-width: 550px) {
+  footer {
+    margin-left: 250px;
+  }
+}
 footer a {
   color: #6b6b6b;
 }
@@ -575,26 +596,6 @@ footer p.credits .hearts {
 }
 footer p.credits .hearts:hover {
   color: #ff0000;
-}
-
-@media screen and (min-width: 550px) {
-  .about {
-    position: fixed;
-    left: 0;
-    top: 0;
-    box-sizing: border-box;
-    width: 250px;
-    height: 100%;
-  }
-
-  .projects {
-    margin: 0;
-    margin-left: 250px;
-  }
-
-  footer {
-    margin-left: 250px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

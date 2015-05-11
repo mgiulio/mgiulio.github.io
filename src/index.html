@@ -32,7 +32,7 @@
 	<script id="tmpl-projects" type="text/x-handlebars-template">
 		<ul class="items">
 			{{#each projects}}
-				<li class="item{{#if this.mainLanguage}} {{toLowerCase this.mainLanguage}}{{/if}}{{#if this.isFork}} fork{{/if}}">
+				<li class="item{{#if this.mainLanguage}} {{toLowerCase this.mainLanguage}}{{/if}}{{#if this.isFork}} fork{{/if}}" data-repo-url="{{this.repoUrl}}">
 					<h2 class="title">{{this.name}}</h2>
 					<p class="description">{{this.description}}</p>
 					<p class="language">{{this.mainLanguage}}</p>

@@ -14,7 +14,6 @@ function init() {
 	setupTemplating();
 	
 	domNodes.projectsSection = document.querySelector('.projects');
-	domNodes.projects = domNodes.projectsSection.querySelector('.items');
 	domNodes.mask = domNodes.projectsSection.querySelector('#mask');
 	
 	fetchRepos();
@@ -51,6 +50,10 @@ function processRepos(data) {
 		
 	domNodes.projectsSection.innerHTML += markup;
 	
+	domNodes.projects = domNodes.projectsSection.querySelector('.items');
+	
+	setupUI();
+	
 	domNodes.projectsSection.classList.remove('activity');
 }
 
@@ -63,7 +66,8 @@ function pluck(repo) {
 		forks: repo.forks_count,
 		creationTime: repo.created_at,
 		stars: repo.stargazers_count,
-		watchers: repo.watchers
+		watchers: repo.watchers,
+		repoUrl: repo.html_url
 	};
 }
 
@@ -90,4 +94,22 @@ function setupTemplating() {
 		var tmplName = domNode.id.slice(5);
 		tmpl[tmplName] = Handlebars.compile(domNode.innerHTML);
 	});
+}
+
+function setupUI() {
+	domNodes.projects.addEventListener('click', showProjectDetails, false);
+}
+
+function showProjectDetails(e) {
+	e.stopPropagation();
+	
+	var target = e.target;
+	
+	if (target === domNodes.projects)
+		return;
+	
+	while (!target.classList.contains('item'))
+		target = target.parentNode; // check for uncatched clicks
+	
+	window.location.href = target.dataset.repoUrl;
 }

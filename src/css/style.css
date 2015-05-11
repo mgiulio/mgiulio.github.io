@@ -464,6 +464,7 @@ body {
   background-color: #f2f2f2;
   border: 1px solid #d3d3d3;
   color: #666;
+  transition: box-shadow 0.3s ease-in;
 }
 .projects .items .item .title {
   margin: 0;
@@ -535,6 +536,10 @@ body {
 .projects .items .item .meta span.forks .icon {
   width: 16px;
   height: 16px;
+}
+.projects .items .item:hover {
+  box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 footer {

@@ -1,0 +1,43 @@
+footer  {
+	@media screen and (min-width: $breakpoint) {
+		margin-left: $left-panel-width;
+	}
+	
+	padding: 5px;
+	
+	font-family: 'Oswald';
+	text-transform: uppercase;
+	font-size: 10px;
+	letter-spacing: 1px;
+	
+	background-color: #f2f2f2;
+	border-top: 1px solid #ddd;
+	color: #6b6b6b;
+	
+	a {
+		color: #6b6b6b;
+	}
+	a:hover {
+		color: #ffffff;
+	}
+	
+	p {
+		text-align: center;
+		margin: 0.5em 0;
+	}
+	p:first-of-type {
+		margin-top: 0;
+	}
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+	
+	p.credits .hearts {
+		font-style: normal;
+		color: #ef4d4d;
+		transition: color 0.3s ease-in;
+	}
+	p.credits .hearts:hover {
+		color: #ff0000;
+	}
+}

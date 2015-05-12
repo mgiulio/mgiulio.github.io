@@ -1,0 +1,69 @@
+.about {
+	text-align: center;
+	padding: 20px;
+	
+	background: $about-bg-col;
+	color: $about-fg-col;
+	
+	.title {
+		margin: 0;
+		font-family: Impact;
+		text-transform: uppercase;
+		font-size: 64px;
+		line-height: 60px;
+		font-weight: 300;
+		color: #f6f6f6;
+		border-bottom: 7px solid #bc0202;	
+	}
+	
+	.tagline {
+		margin: 0;
+		font-family: 
+			Oswald
+			//'Courier New'
+		;
+		font-size: 19px;
+		//font-weight: 300;
+		color: #c0c0c0;
+		
+		.tag {
+			//font-family: 'Courier New';
+			//font-size: 16px;
+		}
+		.bracket {
+			
+		}
+	}
+	
+	.icon {
+		width: 40px;
+		height: 40px;
+		fill: #fff;
+	}
+	
+	& > .location {
+		font-family: 'Courier New';
+		font-size: 14px;
+		////line-height: 40px;
+		text-transform: uppercase;
+		margin: 40px 0;
+		vertical-align: middle;
+		
+		.icon {
+			width: 40px;
+		}
+	}
+	
+	.socials {
+		margin: 40px 0;
+	}
+	
+	@media screen and (min-width: $breakpoint) {
+		position: fixed;
+		left: 0;
+		top: 0;
+		box-sizing: border-box;
+		width: $left-panel-width;
+		height: 100%;
+	}
+}

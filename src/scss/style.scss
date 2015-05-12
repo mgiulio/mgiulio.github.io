@@ -9,22 +9,7 @@ body {
 	background-color: $bg-col;
 }
 
-.about {
-	@media screen and (min-width: $breakpoint) {
-		position: fixed;
-		left: 0;
-		top: 0;
-		box-sizing: border-box;
-		width: $left-panel-width;
-		height: 100%;
-	}
-	
-	text-align: center;
-	padding: 10px;
-	
-	background: $about-bg-col;
-	color: $about-fg-col;
-}
+@import 'about';
 
 .projects {
 	@media screen and (min-width: $breakpoint) {

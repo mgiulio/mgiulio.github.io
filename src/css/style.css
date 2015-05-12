@@ -406,12 +406,16 @@ body {
 }
 
 .about {
-  text-align: center;
-  padding: 20px;
   background: #333;
   color: #aaa;
 }
-.about .title {
+.about .wrapper {
+  width: 210px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about .wrapper .title {
   margin: 0;
   font-family: Impact;
   text-transform: uppercase;
@@ -421,28 +425,28 @@ body {
   color: #f6f6f6;
   border-bottom: 7px solid #bc0202;
 }
-.about .tagline {
+.about .wrapper .tagline {
   margin: 0;
   font-family: Oswald;
   font-size: 19px;
   color: #c0c0c0;
 }
-.about .icon {
+.about .wrapper .icon {
   width: 40px;
   height: 40px;
   fill: #fff;
 }
-.about > .location {
+.about .wrapper > .location {
   font-family: 'Courier New';
   font-size: 14px;
   text-transform: uppercase;
   margin: 40px 0;
   vertical-align: middle;
 }
-.about > .location .icon {
+.about .wrapper > .location .icon {
   width: 40px;
 }
-.about .socials {
+.about .wrapper .socials {
   margin: 40px 0;
 }
 @media screen and (min-width: 550px) {

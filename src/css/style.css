@@ -189,7 +189,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -330,8 +329,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -396,9 +393,17 @@ th {
   padding: 0;
 }
 
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
 @keyframes spin {
   to {
-    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
   }
 }
 body {
@@ -408,7 +413,8 @@ body {
 .about {
   background: #333;
   color: #aaa;
-  transition: top 0.5s ease-out;
+  -webkit-transition: top 0.5s ease-out;
+          transition: top 0.5s ease-out;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -483,7 +489,8 @@ body {
   font-size: 18px;
   text-decoration: none;
   color: #fff;
-  transition: transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+          transition: transform 0.3s ease;
 }
 .about .bar .toggle .icon.collapse {
   width: 20px;
@@ -491,7 +498,9 @@ body {
   display: none;
 }
 .about .bar .toggle:hover {
-  transform: scale(2);
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
 }
 .about.cover .bar .toggle .icon.collapse {
   display: inline-block;
@@ -511,6 +520,7 @@ body {
 }
 
 .projects {
+  background-image: -webkit-linear-gradient(#e2e2e2 2px, transparent 2px), -webkit-linear-gradient(0deg, #e2e2e2 2px, transparent 2px);
   background-image: linear-gradient(#e2e2e2 2px, transparent 2px), linear-gradient(90deg, #e2e2e2 2px, transparent 2px);
   background-size: 50px 50px, 50px 50px;
   background-position: -2px -2px, -2px -2px;
@@ -531,30 +541,57 @@ body {
   border: 1px solid #CBCBCB;
 }
 .projects.activity .github-link img {
-  animation: spin 1s infinite linear;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
 }
 .projects .items {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .projects .items .item {
-  flex: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
   box-sizing: border-box;
   width: 300px;
   height: auto;
   margin: 10px;
   max-width: 350px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 .projects .items .item .language {
-  align-self: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
 .projects .items .item {
   overflow: hidden;
@@ -562,7 +599,8 @@ body {
   background-color: #f2f2f2;
   border: 1px solid #d3d3d3;
   color: #666;
-  transition: box-shadow 0.3s ease-in;
+  -webkit-transition: box-shadow 0.3s ease-in;
+          transition: box-shadow 0.3s ease-in;
 }
 .projects .items .item .title {
   margin: 0;
@@ -572,6 +610,7 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   letter-spacing: 1px;
+  background-image: -webkit-linear-gradient(315deg, rgba(150, 150, 150, 0.1) 0, rgba(150, 150, 150, 0.1) 3px, transparent 3px, transparent 6px, rgba(150, 150, 150, 0.1) 6px, rgba(150, 150, 150, 0.1) 9px, transparent 9px, transparent 12px);
   background-image: linear-gradient(135deg, rgba(150, 150, 150, 0.1) 0, rgba(150, 150, 150, 0.1) 3px, transparent 3px, transparent 6px, rgba(150, 150, 150, 0.1) 6px, rgba(150, 150, 150, 0.1) 9px, transparent 9px, transparent 12px);
   background-size: 8.48528px 8.48528px;
   color: #ee4c54;
@@ -611,9 +650,18 @@ body {
 .projects .items .item .meta {
   margin: 0;
   margin-top: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   font-family: monospace;
   font-size: 12px;
   color: #aaa;
@@ -683,10 +731,9 @@ footer p:last-of-type {
 footer p.credits .hearts {
   font-style: normal;
   color: #ef4d4d;
-  transition: color 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-in;
+          transition: color 0.3s ease-in;
 }
 footer p.credits .hearts:hover {
   color: #ff0000;
 }
-
-/*# sourceMappingURL=style.css.map */

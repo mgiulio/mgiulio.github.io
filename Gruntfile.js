@@ -9,18 +9,18 @@ module.exports = function (grunt) {
 					'src/css/style.css': 'src/scss/style.scss'
 				}
 			}
-		}/* ,
+		},
         autoprefixer: {
             dist: {
                 files: {
-                    'style.css': 'style.css'
+                    'src/css/style.css': 'src/css/style.css'
                 }
             }
-        } */
+        }
     });
 	
 	grunt.loadNpmTasks('grunt-contrib-sass');
-    //grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 	
-	grunt.registerTask('default', ['sass'/* , 'autoprefixer' */]);
+	grunt.registerTask('default', ['sass', 'autoprefixer']);
 };

@@ -15,6 +15,7 @@ function init() {
 	
 	domNodes.projectsSection = document.querySelector('.projects');
 	domNodes.mask = domNodes.projectsSection.querySelector('#mask');
+	domNodes.about = document.querySelector('.about');
 	
 	fetchRepos();
 }
@@ -98,6 +99,13 @@ function setupTemplating() {
 
 function setupUI() {
 	domNodes.projects.addEventListener('click', showProjectDetails, false);
+	
+	domNodes.about.querySelector('.about .toggle').addEventListener('click', function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		
+		domNodes.about.classList.toggle('cover');
+	});
 }
 
 function showProjectDetails(e) {

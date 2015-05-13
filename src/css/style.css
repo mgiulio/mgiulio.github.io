@@ -408,10 +408,26 @@ body {
 .about {
   background: #333;
   color: #aaa;
+  transition: top 0.5s ease-out;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: -100%;
+  margin: 0;
+  margin-top: 40px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.about .icon {
+  width: 40px;
+  height: 40px;
+  fill: #fff;
 }
 .about .wrapper {
   width: 210px;
   padding: 20px;
+  padding-bottom: 0;
   margin: 0 auto;
   text-align: center;
 }
@@ -431,11 +447,6 @@ body {
   font-size: 19px;
   color: #c0c0c0;
 }
-.about .wrapper .icon {
-  width: 40px;
-  height: 40px;
-  fill: #fff;
-}
 .about .wrapper > .location {
   font-family: 'Courier New';
   font-size: 14px;
@@ -447,16 +458,55 @@ body {
   width: 40px;
 }
 .about .wrapper .socials {
-  margin: 40px 0;
+  margin: 40px 0 0;
+}
+.about.cover {
+  top: 0;
+  margin-top: 0;
+}
+.about .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  background-color: #333;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.5);
+}
+.about .bar .toggle {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  font-family: Impact;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.about .bar .toggle .icon.collapse {
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.about .bar .toggle:hover {
+  transform: scale(2);
+}
+.about.cover .bar .toggle .icon.collapse {
+  display: inline-block;
+}
+.about.cover .bar .toggle span {
+  display: none;
 }
 @media screen and (min-width: 550px) {
   .about {
-    position: fixed;
-    left: 0;
-    top: 0;
-    box-sizing: border-box;
     width: 250px;
-    height: 100%;
+    top: 0;
+    margin-top: 0;
+  }
+  .about .bar {
+    display: none;
   }
 }
 
@@ -466,17 +516,11 @@ body {
   background-position: -2px -2px, -2px -2px;
   position: relative;
 }
-@media screen and (min-width: 550px) {
-  .projects {
-    margin: 0;
-    margin-left: 250px;
-  }
-}
 .projects .github-link {
   display: block;
   margin: 0;
   margin-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 50px;
   text-align: center;
 }
 .projects .github-link img {
@@ -594,6 +638,15 @@ body {
 .projects .items .item:hover {
   box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+}
+@media screen and (min-width: 550px) {
+  .projects {
+    margin: 0;
+    margin-left: 250px;
+  }
+  .projects .github-link {
+    padding-top: 20px;
+  }
 }
 
 footer {

@@ -621,7 +621,7 @@ body {
 .projects .items .item .meta span {
   margin: 0 5px;
 }
-.projects .items .item .meta .creation {
+.projects .items .item .meta .timestamp {
   margin-right: auto;
   word-spacing: -2px;
 }

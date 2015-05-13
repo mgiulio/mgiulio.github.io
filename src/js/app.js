@@ -28,8 +28,8 @@ function fetchRepos() {
 	
 	var script = document.createElement('script');
 	script.src = 
-		'repos.js'
-		//`https://api.github.com/users/${username}/repos?callback=jsonPCallback`
+		//repos.js'
+		`https://api.github.com/users/${username}/repos?callback=jsonPCallback&sort=pushed`
 	;
 	document.getElementsByTagName('head')[0].appendChild(script);
 }
@@ -45,7 +45,7 @@ function processRepos(data) {
 	if (data.length === 0) 
 		return;
 	
-	var projects = data.map(pluck);
+	var projects = data.filter(filterRepo).map(pluckRepo);
 		
 	var markup = tmpl['projects']({projects: projects});
 		
@@ -58,17 +58,21 @@ function processRepos(data) {
 	domNodes.projectsSection.classList.remove('activity');
 }
 
-function pluck(repo) {
+function filterRepo(r) {
+	return !r.fork;
+}
+
+function pluckRepo(r) {
 	return {
-		name: repo.name,
-		description: repo.description,
-		mainLanguage: repo.language,
-		isFork: repo.fork,
-		forks: repo.forks_count,
-		creationTime: repo.created_at,
-		stars: repo.stargazers_count,
-		watchers: repo.watchers,
-		repoUrl: repo.html_url
+		name: r.name,
+		description: r.description,
+		mainLanguage: r.language,
+		isFork: r.fork,
+		forks: r.forks_count,
+		lastCommit: r.pushed_at,
+		stars: r.stargazers_count,
+		watchers: r.watchers,
+		repoUrl: r.html_url
 	};
 }
 
@@ -119,5 +123,5 @@ function showProjectDetails(e) {
 	while (!target.classList.contains('item'))
 		target = target.parentNode; // check for uncatched clicks
 	
-	window.location.href = target.dataset.repoUrl;
+	window.open(target.dataset.repoUrl);
 }

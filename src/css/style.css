@@ -522,14 +522,11 @@ body {
   padding-top: 50px;
   text-align: center;
 }
-.projects .github-link img {
+.projects .github-link svg {
   width: 80px;
-  background-color: white;
-  border-radius: 50%;
-  padding: 5px;
-  border: 1px solid #CBCBCB;
+  height: 80px;
 }
-.projects.activity .github-link img {
+.projects.activity .github-link svg {
   -webkit-animation: spin 1s infinite linear;
           animation: spin 1s infinite linear;
 }

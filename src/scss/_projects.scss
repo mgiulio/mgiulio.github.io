@@ -33,16 +33,13 @@
 		padding-top: 50px;
 		text-align: center;
 		
-		img {
+		svg {
 			width: 80px;
-			background-color: white;
-			border-radius: 50%;
-			padding: 5px;
-			border: 1px solid #CBCBCB;
+			height: 80px;
 		}
 	}
 	
-	&.activity .github-link img {
+	&.activity .github-link svg {
 		animation: spin 1s infinite linear;
 	}
 	

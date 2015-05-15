@@ -447,10 +447,10 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   margin: 40px 0;
-  vertical-align: middle;
 }
 .about .wrapper > .location .icon {
   width: 40px;
+  vertical-align: middle;
 }
 .about .wrapper .socials {
   margin: 40px 0 0;

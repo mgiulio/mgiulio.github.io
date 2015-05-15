@@ -490,6 +490,7 @@ body {
   -webkit-transform: scale(2);
       -ms-transform: scale(2);
           transform: scale(2);
+  outline: none;
 }
 .about.cover .bar .toggle .icon.collapse {
   display: inline-block;

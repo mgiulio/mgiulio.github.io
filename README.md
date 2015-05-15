@@ -1,6 +1,6 @@
 # About(*under construction*)
 
-This is my personal page [on GitHub](https://mgiulio.github.io).
+This is my personal page [on GitHub](http://mgiulio.github.io).
 
 # Features
 

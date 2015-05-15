@@ -28,8 +28,8 @@ function fetchRepos() {
 	
 	var script = document.createElement('script');
 	script.src = 
-		//repos.js'
-		`https://api.github.com/users/${username}/repos?callback=jsonPCallback&sort=pushed`
+		'repos.js'
+		//`https://api.github.com/users/${username}/repos?callback=jsonPCallback&sort=pushed`
 	;
 	document.getElementsByTagName('head')[0].appendChild(script);
 }

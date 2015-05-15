@@ -37,12 +37,12 @@ module.exports = function (grunt) {
 		copy: {
 			main: {
 				files: {
-					'dist/index.html': 'src/index.html',
-					'dist/style.css': 'tmp/style.css',
-					'dist/script.js': 'tmp/script.js',
+					'index.html': 'src/index.html',
+					'style.css': 'tmp/style.css',
+					'script.js': 'tmp/script.js',
 					//'dist/script.js.map': 'tmp/script.js.map'
-					'dist/img/sprite.svg': 'src/img/sprite.svg',
-					'dist/img/diag-patt.png': 'src/img/diag-patt.png'
+					'img/sprite.svg': 'src/img/sprite.svg',
+					'img/diag-patt.png': 'src/img/diag-patt.png'
 				}
 			}
 		}

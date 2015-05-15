@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>mgiulio</title>
+	<meta name="description" content="mgiulio">
+    <meta name="author" content="mgiulio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='http://fonts.googleapis.com/css?family=Noto+Serif|Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="all" href="style.css">
+</head>
+
+<body class="empty">
+	<header class="about" id="about">
+		<div class="wrapper">
+			<svg role="img" title="Logo" id="logo">
+				<use xlink:href="img/sprite.svg#logo" />
+			</svg>
+			<!-- <h1 class="title">mgiulio</h1> -->
+			<!-- <h2 class="tagline"><span class="bracket">&lt;</span><span class="tag">frontend</span><span class="bracket">/&gt;</span> Web Developer</h2> -->
+			
+			<p class="location"><svg role="img" title="Location" class="icon location"><use xlink:href="img/sprite.svg#location" /></svg>Planet Earth</p>
+			
+			<p class="socials">
+				<a class="github" href="http://github.com/mgiulio" target="_blank">
+					<svg role="img" title="Github" class="icon octocat"><use xlink:href="img/sprite.svg#octocat" /></svg>
+				</a>
+				<a class="twitter" href="http://twitter.com/mgiulio" target="_blank">
+					<svg role="img" title="Twitter" class="icon twitter"><use xlink:href="img/sprite.svg#twitter" /></svg>
+				</a>
+				<a class="pinterest" href="http://pinterest.com/mgiulio" target="_blank">
+					<svg role="img" title="Pinterest" class="icon pinterest"><use xlink:href="img/sprite.svg#pinterest" /></svg>
+				</a>
+			</p>
+		</div>
+		<div class="bar">
+			<a class="toggle" href="#">
+				<svg role="img" title="Collapse" class="icon collapse"><use xlink:href="img/sprite.svg#collapse" /></svg>
+				<span>MG</span>
+			</a>
+		</div>
+	</header>
+	
+	<section class="projects">
+		<a class="github-link" href="https://github.com/mgiulio" title="mgiulio's Github">
+			<svg role="img" title="Octocat"><use xlink:href="img/sprite.svg#custom-octocat" /></svg>
+		</a>
+	</section>
+	
+	<footer>
+		<p class="credits">Crafted with <em class="hearts">&hearts;</em> <a href="#about">mg</a></p>
+	</footer>
+	
+	<script id="tmpl-projects" type="text/x-handlebars-template">
+		<ul class="items">
+			{{#each projects}}
+				<li class="item{{#if this.mainLanguage}} {{toLowerCase this.mainLanguage}}{{/if}}{{#if this.isFork}} fork{{/if}}" data-repo-url="{{this.repoUrl}}">
+					<h2 class="title">{{this.name}}</h2>
+					<p class="description">{{this.description}}</p>
+					<p class="language">{{this.mainLanguage}}</p>
+					<p class="meta">
+						<span class="timestamp last-commit" title="Last commit">
+							<svg role="img" title="Clock" class="icon"><use xlink:href="img/sprite.svg#clock" /></svg>
+							{{date this.lastCommit}}
+						</span>
+						<span class="counter forks">
+							<svg role="img" title="Fork" class="icon"><use xlink:href="img/sprite.svg#fork" /></svg>
+							{{this.forks}}
+						</span>
+						<span class="counter stars">
+							<svg role="img" title="Star" class="icon"><use xlink:href="img/sprite.svg#star" /></svg>
+							{{this.stars}}
+						</span>
+						<span class="counter watchers">
+							<svg role="img" title="Eye" class="icon"><use xlink:href="img/sprite.svg#eye" /></svg>
+							{{this.watchers}}
+						</span>
+					</p>
+				</li>
+			{{/each}}
+		</ul>
+	</script>
+	
+	<script src="script.js"></script>
+</body>
+</html>

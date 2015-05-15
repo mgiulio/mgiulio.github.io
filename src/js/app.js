@@ -14,8 +14,14 @@ function init() {
 	setupTemplating();
 	
 	domNodes.projectsSection = document.querySelector('.projects');
-	domNodes.mask = domNodes.projectsSection.querySelector('#mask');
 	domNodes.about = document.querySelector('.about');
+	
+	domNodes.about.querySelector('.about .toggle').addEventListener('click', function(e) {
+		e.stopPropagation();
+		e.preventDefault();
+		
+		domNodes.about.classList.toggle('cover');
+	});
 	
 	fetchRepos();
 }
@@ -53,9 +59,10 @@ function processRepos(data) {
 	
 	domNodes.projects = domNodes.projectsSection.querySelector('.items');
 	
-	setupUI();
+	domNodes.projects.addEventListener('click', showProjectDetails, false);
 	
 	domNodes.projectsSection.classList.remove('activity');
+	document.body.classList.remove('empty');
 }
 
 function filterRepo(r) {
@@ -98,17 +105,6 @@ function setupTemplating() {
 	toArray(templateNodes).forEach(function(domNode) {
 		var tmplName = domNode.id.slice(5);
 		tmpl[tmplName] = Handlebars.compile(domNode.innerHTML);
-	});
-}
-
-function setupUI() {
-	domNodes.projects.addEventListener('click', showProjectDetails, false);
-	
-	domNodes.about.querySelector('.about .toggle').addEventListener('click', function(e) {
-		e.stopPropagation();
-		e.preventDefault();
-		
-		domNodes.about.classList.toggle('cover');
 	});
 }
 

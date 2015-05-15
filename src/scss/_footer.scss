@@ -1,8 +1,12 @@
+.empty footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
 footer  {
-	@media screen and (min-width: $breakpoint) {
-		margin-left: $left-panel-width;
-	}
-	
 	padding: 5px;
 	
 	font-family: 'Oswald', sans-serif;

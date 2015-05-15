@@ -406,8 +406,23 @@ th {
             transform: rotateY(360deg);
   }
 }
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
+  min-height: 100%;
   background-color: #e7e7e7;
+  background-image: -webkit-linear-gradient(#e2e2e2 2px, transparent 2px), -webkit-linear-gradient(0deg, #e2e2e2 2px, transparent 2px);
+  background-image: linear-gradient(#e2e2e2 2px, transparent 2px), linear-gradient(90deg, #e2e2e2 2px, transparent 2px);
+  background-size: 50px 50px, 50px 50px;
+  background-position: -2px -2px, -2px -2px;
+}
+@media screen and (min-width: 550px) {
+  body {
+    margin-left: 250px;
+  }
 }
 
 .about {
@@ -510,10 +525,6 @@ body {
 }
 
 .projects {
-  background-image: -webkit-linear-gradient(#e2e2e2 2px, transparent 2px), -webkit-linear-gradient(0deg, #e2e2e2 2px, transparent 2px);
-  background-image: linear-gradient(#e2e2e2 2px, transparent 2px), linear-gradient(90deg, #e2e2e2 2px, transparent 2px);
-  background-size: 50px 50px, 50px 50px;
-  background-position: -2px -2px, -2px -2px;
   position: relative;
 }
 .projects .github-link {
@@ -677,11 +688,18 @@ body {
 @media screen and (min-width: 550px) {
   .projects {
     margin: 0;
-    margin-left: 250px;
   }
   .projects .github-link {
     padding-top: 20px;
   }
+}
+
+.empty footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 footer {
@@ -693,11 +711,6 @@ footer {
   background-color: #f2f2f2;
   border-top: 1px solid #ddd;
   color: #6b6b6b;
-}
-@media screen and (min-width: 550px) {
-  footer {
-    margin-left: 250px;
-  }
 }
 footer a {
   color: #6b6b6b;

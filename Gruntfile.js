@@ -1,26 +1,64 @@
 module.exports = function (grunt) {
     grunt.initConfig({
 		sass: {
-			dist: {
+			main: {
 				options: {
-					style: 'expanded'
+					style: 'expanded',
+					sourcemap: 'none'
 				},
 				files: {
-					'src/css/style.css': 'src/scss/style.scss'
+					'tmp/style.css': 'src/scss/style.scss'
 				}
 			}
 		},
         autoprefixer: {
-            dist: {
+            main: {
                 files: {
-                    'src/css/style.css': 'src/css/style.css'
+                    'tmp/style.css': 'tmp/style.css'
                 }
             }
-        }
+        },
+		concat: {
+			main: {  
+				src: ['src/js/handlebars.js', 'src/js/app.js'],
+				dest: 'tmp/script.js'
+			}
+		},
+		uglify: {
+			options: {
+				sourceMap: true
+			},
+			main: {
+				files: {
+					'tmp/script.js': 'tmp/script.js'
+				}
+			}
+		},
+		copy: {
+			main: {
+				files: {
+					'dist/index.html': 'src/index.html',
+					'dist/style.css': 'tmp/style.css',
+					'dist/script.js': 'tmp/script.js',
+					//'dist/script.js.map': 'tmp/script.js.map'
+					'dist/img/sprite.svg': 'src/img/sprite.svg',
+					'dist/img/diag-patt.png': 'src/img/diag-patt.png'
+				}
+			}
+		}
     });
 	
 	grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	
-	grunt.registerTask('default', ['sass', 'autoprefixer']);
+	grunt.registerTask('clean', 'Cleanup tmp and dest directories', function() {
+		grunt.file.delete('tmp/');
+		grunt.file.delete('dest/');
+	});
+	
+	grunt.registerTask('default', ['clean', 'sass', 'autoprefixer', 'concat', 'copy']);
+	grunt.registerTask('release', ['clean', 'sass', 'autoprefixer', 'concat', 'uglify', 'copy']);
 };

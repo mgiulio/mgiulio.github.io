@@ -33,10 +33,7 @@ function fetchRepos() {
 	var username = ghUrl.substr(ghUrl.lastIndexOf('/') + 1);
 	
 	var script = document.createElement('script');
-	script.src = 
-		'repos.js'
-		//`https://api.github.com/users/${username}/repos?callback=jsonPCallback&sort=pushed`
-	;
+	script.src = 'https://api.github.com/users/' + username + '/repos?callback=jsonPCallback&sort=pushed';
 	document.getElementsByTagName('head')[0].appendChild(script);
 }
 
@@ -98,7 +95,7 @@ function setupTemplating() {
 		month = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'][month];
 		year = String(year).substr(-2);
 		
-		return `${day} ${month} ${year}`;
+		return day + ' ' + month + ' ' + year;
 	});
 	
 	var templateNodes = document.querySelectorAll('[type="text/x-handlebars-template"]');

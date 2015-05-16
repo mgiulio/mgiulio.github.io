@@ -31,17 +31,7 @@ function fetchRepos() {
 	
 	var ghUrl = domNodes.projectsSection.querySelector('.github-link').href;
 	var username = ghUrl.substr(ghUrl.lastIndexOf('/') + 1);
-	
-	var script = document.createElement('script');
-	script.src = 'https://api.github.com/users/' + username + '/repos?callback=jsonPCallback&sort=pushed';
-	document.getElementsByTagName('head')[0].appendChild(script);
-}
-
-function jsonPCallback(response) {
-	if (response.meta.status != 200)
-		throw new Error('status not 200');
-	
-	processRepos(response.data);
+	gh.getUserRepos(username, 'pushed', processRepos);
 }
 
 function processRepos(data) {

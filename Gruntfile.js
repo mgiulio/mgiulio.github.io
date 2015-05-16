@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         },
 		concat: {
 			main: {  
-				src: ['src/js/handlebars.js', 'src/js/app.js'],
+				src: ['src/js/handlebars.js', 'src/js/gh-api.js', 'src/js/app.js'],
 				dest: 'tmp/script.js'
 			}
 		},

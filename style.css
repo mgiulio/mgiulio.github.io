@@ -406,6 +406,10 @@ th {
             transform: rotateY(360deg);
   }
 }
+#sprite {
+  display: none;
+}
+
 html {
   height: 100%;
 }
@@ -452,7 +456,7 @@ body {
   margin: 0 auto;
   text-align: center;
 }
-.about .wrapper #logo {
+.about .wrapper .logo {
   display: block;
   width: 210px;
   height: 94px;

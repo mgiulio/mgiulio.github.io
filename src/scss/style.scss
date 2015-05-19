@@ -5,6 +5,10 @@ $breakpoint: 550px;
 @import 'color';
 @import 'anims';
 
+#sprite {
+	display: none;
+}
+
 html {
 	height: 100%;
 }

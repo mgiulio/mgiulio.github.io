@@ -76,37 +76,7 @@
 	<footer>
 		<p class="credits">Crafted with <em class="hearts">&hearts;</em> <a href="#about">mg</a></p>
 	</footer>
-	
-	<script id="tmpl-projects" type="text/x-handlebars-template">
-		<ul class="items">
-			{{#each projects}}
-				<li class="item{{#if this.mainLanguage}} {{toLowerCase this.mainLanguage}}{{/if}}{{#if this.isFork}} fork{{/if}}" data-repo-url="{{this.repoUrl}}">
-					<h2 class="title">{{this.name}}</h2>
-					<p class="description">{{this.description}}</p>
-					<p class="language">{{this.mainLanguage}}</p>
-					<p class="meta">
-						<span class="timestamp last-commit" title="Last commit">
-							<svg role="img" title="Clock" class="icon"><use xlink:href="#clock" /></svg>
-							{{date this.lastCommit}}
-						</span>
-						<span class="counter forks">
-							<svg role="img" title="Fork" class="icon"><use xlink:href="#fork" /></svg>
-							{{this.forks}}
-						</span>
-						<span class="counter stars">
-							<svg role="img" title="Star" class="icon"><use xlink:href="#star" /></svg>
-							{{this.stars}}
-						</span>
-						<span class="counter watchers">
-							<svg role="img" title="Eye" class="icon"><use xlink:href="#eye" /></svg>
-							{{this.watchers}}
-						</span>
-					</p>
-				</li>
-			{{/each}}
-		</ul>
-	</script>
-	
+		
 	<script src="script.js"></script>
 </body>
 </html>

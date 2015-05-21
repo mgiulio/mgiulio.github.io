@@ -46,7 +46,7 @@ var tmpl = (function() {
 		month = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'][month];
 		year = String(year).substr(-2);
 		
-		return day + ' ' + month + ' ' + year;
+		return `${day} ${month} ${year}`;
 	}
 		
 	function classIf(cond, className) {

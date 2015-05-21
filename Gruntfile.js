@@ -18,9 +18,28 @@ module.exports = function (grunt) {
                 }
             }
         },
+		traceur: {
+			options: {
+				script: true, //moduleNames: false
+			},
+			main: {
+				files: [{
+					expand: true,
+					cwd: 'src/js',
+					src: ['*.js'], // '**/*.js'
+					dest: 'tmp/traceur'
+				}]
+			},
+		},
 		concat: {
-			main: {  
-				src: ['src/js/gh-api.js', 'src/js/gh-templates.js', 'src/js/app.js'],
+			main: {
+				/* files: [{
+					expand: true,
+					cwd: 'tmp/traceur',
+					src: ['*.js'],
+					dest: 'tmp/script.js'
+				}] */
+				src: ['tmp/traceur/gh-api.js', 'tmp/traceur/templates.js', 'tmp/traceur//app.js'],
 				dest: 'tmp/script.js'
 			}
 		},
@@ -50,6 +69,7 @@ module.exports = function (grunt) {
 	
 	grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-traceur');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
@@ -59,6 +79,6 @@ module.exports = function (grunt) {
 		grunt.file.delete('dest/');
 	});
 	
-	grunt.registerTask('default', ['clean', 'sass', 'autoprefixer', 'concat', 'copy']);
-	grunt.registerTask('release', ['clean', 'sass', 'autoprefixer', 'concat', 'uglify', 'copy']);
+	grunt.registerTask('default', ['clean', 'sass', 'autoprefixer', 'traceur', 'concat', 'copy']);
+	grunt.registerTask('release', ['clean', 'sass', 'autoprefixer', 'traceur', 'concat', 'uglify', 'copy']);
 };

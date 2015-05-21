@@ -37,7 +37,7 @@ function processRepos(data) {
 	
 	var projects = data.filter(filterRepo).map(pluckRepo);
 		
-	var markup = tmpl['projects']({projects: projects});
+	var markup = tmpl['projects'](projects);
 		
 	domNodes.projectsSection.innerHTML += markup;
 	

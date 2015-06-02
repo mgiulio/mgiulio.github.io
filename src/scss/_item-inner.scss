@@ -71,17 +71,20 @@
 		color: #f6f6f6;
 	}
 		
-	&.html .language {
+	&.main-lang-html .language {
 		background-color: #fed652;
 	}
-	&.css  .language {
+	&.main-lang-css  .language {
 		background-color: #ee9499;
 	}
-	&.javascript .language {
+	&.main-lang-javascript .language {
 		background-color: #eebe94;
 	}
-	&.php .language {
+	&.main-lang-php .language {
 		background-color: #d9e1a1;
+	}
+	&.main-lang-not-available .language {
+		background-color: #e4e6d5;
 	}
 
 	.meta {

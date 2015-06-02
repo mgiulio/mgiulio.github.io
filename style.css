@@ -637,17 +637,20 @@ body {
   box-shadow: 0 0 1px 1px #e7d6d6;
   color: #f6f6f6;
 }
-.projects .items .item.html .language {
+.projects .items .item.main-lang-html .language {
   background-color: #fed652;
 }
-.projects .items .item.css .language {
+.projects .items .item.main-lang-css .language {
   background-color: #ee9499;
 }
-.projects .items .item.javascript .language {
+.projects .items .item.main-lang-javascript .language {
   background-color: #eebe94;
 }
-.projects .items .item.php .language {
+.projects .items .item.main-lang-php .language {
   background-color: #d9e1a1;
+}
+.projects .items .item.main-lang-not-available .language {
+  background-color: #e4e6d5;
 }
 .projects .items .item .meta {
   margin: 0;

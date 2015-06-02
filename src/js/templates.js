@@ -5,7 +5,7 @@ var tmpl = (function() {
 				<li class="item${ mainLanguageClass(m.mainLanguage) }${ classIf(m.isFork, ' ' + 'fork') }" data-repo-url="${m.repoUrl}">
 					<h2 class="title">${m.name}</h2>
 					<p class="description">${m.description}</p>
-					<p class="language">${m.mainLanguage}</p>
+					<p class="language">${ m.mainLanguage ? m.mainLanguage : 'Not Available' }</p>
 					<p class="meta">
 						<span class="timestamp last-commit" title="Last commit">
 							<svg role="img" title="Clock" class="icon"><use xlink:href="#clock" /></svg>
@@ -54,7 +54,8 @@ var tmpl = (function() {
 	}
 	
 	function mainLanguageClass(lang) {
-		return !lang ? '' : ' ' + toLowerCase(lang);
+		var lang = !lang ? 'not-available' : toLowerCase(lang);
+		return ' ' + 'main-lang-' + lang;
 	}
 	
 })();

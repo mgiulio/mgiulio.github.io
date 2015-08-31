@@ -16,33 +16,33 @@ html {
 body {
 	position: relative;
 	min-height: 100%;
-	
+
 	@media screen and (min-width: $breakpoint) {
 		margin-left: $left-panel-width;
 	}
-	
+
 	background-color: $bg-col;
 	//background-color: $grid-bg;
-	
+
 	// Adapted from http://lea.verou.me/css3patterns/#blueprint-grid
 	$grid-bg: rgba(0,0,0, 0);
 	$grid-major: #e2e2e2; //lighten(color(stone), 40%);
 	//$grid-minor: lighten(color(stone), 60%);
-	background-image: 
+	background-image:
 		linear-gradient($grid-major 2px, transparent 2px)
 		,linear-gradient(90deg, $grid-major 2px, transparent 2px)
 		//,linear-gradient($grid-minor 1px, transparent 1px)
 		//,linear-gradient(90deg, $grid-minor 1px, transparent 1px)
 	;
 	background-size:
-		50px 50px, //100px 100px 
+		50px 50px, //100px 100px
 		50px 50px //,100px 100px
-		//,20px 20px, 
+		//,20px 20px,
 		//,20px 20px
 	;
 	background-position:
 		-2px -2px
-		,-2px -2px, 
+		,-2px -2px,
 		//,-1px -1px
 		//,-1px -1px
 	;
@@ -51,3 +51,4 @@ body {
 @import 'about';
 @import 'projects';
 @import 'footer';
+@import 'about-page'

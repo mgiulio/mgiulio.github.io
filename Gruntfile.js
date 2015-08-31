@@ -57,6 +57,7 @@ module.exports = function (grunt) {
 			main: {
 				files: {
 					'index.html': 'src/index.html',
+               'about.html': 'src/about.html',
 					'style.css': 'tmp/style.css',
 					'script.js': 'tmp/script.js',
 					//'dist/script.js.map': 'tmp/script.js.map'
@@ -66,19 +67,19 @@ module.exports = function (grunt) {
 			}
 		}
     });
-	
+
 	grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-traceur');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	
+
 	grunt.registerTask('clean', 'Cleanup tmp and dest directories', function() {
 		grunt.file.delete('tmp/');
 		grunt.file.delete('dest/');
 	});
-	
+
 	grunt.registerTask('default', ['clean', 'sass', 'autoprefixer', 'traceur', 'concat', 'copy']);
 	grunt.registerTask('release', ['clean', 'sass', 'autoprefixer', 'traceur', 'concat', 'uglify', 'copy']);
 };

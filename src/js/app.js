@@ -41,9 +41,10 @@ function processRepos(data) {
 		
 	domNodes.projectsSection.innerHTML += markup;
 	
-	domNodes.projects = domNodes.projectsSection.querySelector('.items');
+	domNodes.projects = domNodes.projectsSection.querySelectorAll('.items');
 	
-	domNodes.projects.addEventListener('click', showProjectDetails, false);
+	for (var i = 0; i < domNodes.projects.length; ++i)
+		domNodes.projects[i].addEventListener('click', showProjectDetails, false);
 	
 	domNodes.projectsSection.classList.remove('activity');
 	document.body.classList.remove('empty');
@@ -72,7 +73,7 @@ function showProjectDetails(e) {
 	
 	var target = e.target;
 	
-	if (target === domNodes.projects)
+	if (target.classList.contains('items'))
 		return;
 	
 	while (!target.classList.contains('item'))

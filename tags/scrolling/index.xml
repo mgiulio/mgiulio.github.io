@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scrolling on mgiulio</title>
+    <link>/tags/scrolling/</link>
+    <description>Recent content in Scrolling on mgiulio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Apr 2018 18:54:25 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/scrolling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Native Infinite Scrolling with the IntersectionObserver API</title>
+      <link>/articles/native-infinite-scrolling-intersectionobserver/</link>
+      <pubDate>Tue, 17 Apr 2018 18:54:25 +0200</pubDate>
+      
+      <guid>/articles/native-infinite-scrolling-intersectionobserver/</guid>
+      <description>Read the full article on Sitepoint</description>
+    </item>
+    
+  </channel>
+</rss>

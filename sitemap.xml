@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/articles/bootstrap-native/</loc>
+    <lastmod>2018-04-20T19:48:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/articles/font-display/</loc>
+    <lastmod>2018-04-20T19:46:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/articles/building-trello-layout-css-flexbox/</loc>
+    <lastmod>2018-04-20T19:44:57+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/articles/dom-manipulation-methods/</loc>
+    <lastmod>2018-04-19T19:02:22+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/articles/carousel-3d/</loc>
+    <lastmod>2018-04-19T18:59:49+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/articles/event-propagation/</loc>
+    <lastmod>2018-04-19T18:57:38+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/articles/native-infinite-scrolling-intersectionobserver/</loc>
+    <lastmod>2018-04-17T18:54:25+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2018-03-30T13:45:40+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/article-layout-with-css-grid/</loc>
+    <lastmod>2018-03-29T17:30:18+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/syntax-highlighting-in-hugo/</loc>
+    <lastmod>2018-03-29T17:29:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/hello-world/</loc>
+    <lastmod>2018-03-29T17:26:52+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/3d/</loc>
+    <lastmod>2018-04-19T18:59:49+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/articles/</loc>
+    <lastmod>2018-04-20T19:48:10+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2018-03-29T17:30:18+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bootstrap/</loc>
+    <lastmod>2018-04-20T19:48:10+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/carousel/</loc>
+    <lastmod>2018-04-19T18:59:49+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/css/</loc>
+    <lastmod>2018-04-20T19:46:49+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/dom/</loc>
+    <lastmod>2018-04-19T19:02:22+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/dom-events/</loc>
+    <lastmod>2018-04-19T18:57:38+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/fonts/</loc>
+    <lastmod>2018-04-20T19:46:49+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/grid/</loc>
+    <lastmod>2018-03-29T17:30:18+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/html/</loc>
+    <lastmod>2018-04-20T19:44:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2018-03-29T17:29:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/javascript/</loc>
+    <lastmod>2018-04-20T19:48:10+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/jquery/</loc>
+    <lastmod>2018-04-20T19:48:10+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/layout/</loc>
+    <lastmod>2018-04-20T19:44:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/scrolling/</loc>
+    <lastmod>2018-04-17T18:54:25+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/syntax-highlighting/</loc>
+    <lastmod>2018-03-29T17:29:31+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2018-04-19T18:59:49+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/trello/</loc>
+    <lastmod>2018-04-20T19:44:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2018-04-20T19:48:10+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

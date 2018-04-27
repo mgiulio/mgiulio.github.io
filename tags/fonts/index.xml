@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fonts on mgiulio</title>
+    <link>/tags/fonts/</link>
+    <description>Recent content in Fonts on mgiulio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Apr 2018 19:46:49 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/fonts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Font Display</title>
+      <link>/articles/font-display/</link>
+      <pubDate>Fri, 20 Apr 2018 19:46:49 +0200</pubDate>
+      
+      <guid>/articles/font-display/</guid>
+      <description>Read the full article on Sitepoint</description>
+    </item>
+    
+  </channel>
+</rss>

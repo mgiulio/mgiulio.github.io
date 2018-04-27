@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bootstrap on mgiulio</title>
+    <link>/tags/bootstrap/</link>
+    <description>Recent content in Bootstrap on mgiulio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Apr 2018 19:48:10 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bootstrap Native</title>
+      <link>/articles/bootstrap-native/</link>
+      <pubDate>Fri, 20 Apr 2018 19:48:10 +0200</pubDate>
+      
+      <guid>/articles/bootstrap-native/</guid>
+      <description>Read the full article on Sitepoint</description>
+    </item>
+    
+  </channel>
+</rss>

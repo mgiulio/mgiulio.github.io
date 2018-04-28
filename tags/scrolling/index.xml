@@ -6,7 +6,7 @@
     <description>Recent content in Scrolling on mgiulio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Apr 2018 18:54:25 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 28 Apr 2018 18:00:01 +0200</lastBuildDate>
     
 	<atom:link href="/tags/scrolling/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Native Infinite Scrolling with the IntersectionObserver API</title>
       <link>/articles/native-infinite-scrolling-intersectionobserver/</link>
-      <pubDate>Tue, 17 Apr 2018 18:54:25 +0200</pubDate>
+      <pubDate>Sat, 28 Apr 2018 18:00:01 +0200</pubDate>
       
       <guid>/articles/native-infinite-scrolling-intersectionobserver/</guid>
+      <description>Read the full article on Sitepoint</description>
+    </item>
+    
+    <item>
+      <title>How to Implement Smooth Scrolling in Vanilla JavaScript</title>
+      <link>/articles/smooth-scrolling-vanilla-javascript/</link>
+      <pubDate>Sat, 28 Apr 2018 18:00:00 +0200</pubDate>
+      
+      <guid>/articles/smooth-scrolling-vanilla-javascript/</guid>
       <description>Read the full article on Sitepoint</description>
     </item>
     

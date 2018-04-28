@@ -38,14 +38,5 @@
       <description>Read the full article on Sitepoint</description>
     </item>
     
-    <item>
-      <title>Article Layout With Css Grid</title>
-      <link>/blog/article-layout-with-css-grid/</link>
-      <pubDate>Thu, 29 Mar 2018 17:30:18 +0200</pubDate>
-      
-      <guid>/blog/article-layout-with-css-grid/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

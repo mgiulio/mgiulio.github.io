@@ -38,26 +38,6 @@
   </url>
   
   <url>
-    <loc>/about/</loc>
-    <lastmod>2018-03-30T13:45:40+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/article-layout-with-css-grid/</loc>
-    <lastmod>2018-03-29T17:30:18+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/syntax-highlighting-in-hugo/</loc>
-    <lastmod>2018-03-29T17:29:31+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/hello-world/</loc>
-    <lastmod>2018-03-29T17:26:52+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/3d/</loc>
     <lastmod>2018-04-19T18:59:49+02:00</lastmod>
     <priority>0</priority>
@@ -66,12 +46,6 @@
   <url>
     <loc>/articles/</loc>
     <lastmod>2018-04-20T19:48:10+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/blog/</loc>
-    <lastmod>2018-03-29T17:30:18+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -117,20 +91,8 @@
   </url>
   
   <url>
-    <loc>/tags/grid/</loc>
-    <lastmod>2018-03-29T17:30:18+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/html/</loc>
     <lastmod>2018-04-20T19:44:57+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/hugo/</loc>
-    <lastmod>2018-03-29T17:29:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -155,12 +117,6 @@
   <url>
     <loc>/tags/scrolling/</loc>
     <lastmod>2018-04-17T18:54:25+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/syntax-highlighting/</loc>
-    <lastmod>2018-03-29T17:29:31+02:00</lastmod>
     <priority>0</priority>
   </url>
   

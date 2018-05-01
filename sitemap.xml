@@ -3,37 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/articles/font-display/</loc>
+    <loc>/articles/css-font-display-future-font-rendering-web/</loc>
     <lastmod>2018-04-28T18:00:07+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/articles/building-trello-layout-css-flexbox/</loc>
+    <loc>/articles/building-trello-layout-css-grid-flexbox/</loc>
     <lastmod>2018-04-28T18:00:06+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/articles/dom-manipulation-methods/</loc>
+    <loc>/articles/native-dom-manipulation-methods/</loc>
     <lastmod>2018-04-28T18:00:05+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/articles/carousel-3d/</loc>
+    <loc>/articles/building-3d-rotating-carousel-css-javascript/</loc>
     <lastmod>2018-04-28T18:00:04+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/articles/event-propagation/</loc>
+    <loc>/articles/event-bubbling-javascript/</loc>
     <lastmod>2018-04-28T18:00:03+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/articles/bootstrap-native/</loc>
+    <loc>/articles/use-bootstrap-components-without-jquery/</loc>
     <lastmod>2018-04-28T18:00:02+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/articles/native-infinite-scrolling-intersectionobserver/</loc>
+    <loc>/articles/intersectionobserver-api/</loc>
     <lastmod>2018-04-28T18:00:01+02:00</lastmod>
   </url>
   

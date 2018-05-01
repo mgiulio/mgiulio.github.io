@@ -12,65 +12,65 @@
     
     
     <item>
-      <title>Font Display</title>
-      <link>/articles/font-display/</link>
+      <title>CSS font-display: The Future of Font Rendering on the Web</title>
+      <link>/articles/css-font-display-future-font-rendering-web/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:07 +0200</pubDate>
       
-      <guid>/articles/font-display/</guid>
+      <guid>/articles/css-font-display-future-font-rendering-web/</guid>
       <description>Read the full article on Sitepoint</description>
     </item>
     
     <item>
-      <title>Building Trello Layout Css Flexbox</title>
-      <link>/articles/building-trello-layout-css-flexbox/</link>
+      <title>Building a Trello Layout with CSS Grid and Flexbox</title>
+      <link>/articles/building-trello-layout-css-grid-flexbox/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:06 +0200</pubDate>
       
-      <guid>/articles/building-trello-layout-css-flexbox/</guid>
+      <guid>/articles/building-trello-layout-css-grid-flexbox/</guid>
       <description>Read the full article on Sitepoint</description>
     </item>
     
     <item>
       <title>6 jQuery-inspired Native DOM Manipulation Methods You Should Know</title>
-      <link>/articles/dom-manipulation-methods/</link>
+      <link>/articles/native-dom-manipulation-methods/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:05 +0200</pubDate>
       
-      <guid>/articles/dom-manipulation-methods/</guid>
+      <guid>/articles/native-dom-manipulation-methods/</guid>
       <description>Read the full article on Sitepoint</description>
     </item>
     
     <item>
       <title>Building a 3D Rotating Carousel with CSS and JavaScript</title>
-      <link>/articles/carousel-3d/</link>
+      <link>/articles/building-3d-rotating-carousel-css-javascript/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:04 +0200</pubDate>
       
-      <guid>/articles/carousel-3d/</guid>
+      <guid>/articles/building-3d-rotating-carousel-css-javascript/</guid>
       <description>Read the full article on Sitepoint</description>
     </item>
     
     <item>
-      <title>What Is Event Bubbling in JavaScript? Event Propagation</title>
-      <link>/articles/event-propagation/</link>
+      <title>What Is Event Bubbling in JavaScript? Event Propagation Explained</title>
+      <link>/articles/event-bubbling-javascript/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:03 +0200</pubDate>
       
-      <guid>/articles/event-propagation/</guid>
+      <guid>/articles/event-bubbling-javascript/</guid>
       <description>Read the full article on Sitepoint</description>
     </item>
     
     <item>
-      <title>Bootstrap Native</title>
-      <link>/articles/bootstrap-native/</link>
+      <title>Bootstrap Native: Using Bootstrap Components without jQuery</title>
+      <link>/articles/use-bootstrap-components-without-jquery/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:02 +0200</pubDate>
       
-      <guid>/articles/bootstrap-native/</guid>
+      <guid>/articles/use-bootstrap-components-without-jquery/</guid>
       <description>Read the full article on Sitepoint</description>
     </item>
     
     <item>
       <title>Native Infinite Scrolling with the IntersectionObserver API</title>
-      <link>/articles/native-infinite-scrolling-intersectionobserver/</link>
+      <link>/articles/intersectionobserver-api/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:01 +0200</pubDate>
       
-      <guid>/articles/native-infinite-scrolling-intersectionobserver/</guid>
+      <guid>/articles/intersectionobserver-api/</guid>
       <description>Read the full article on Sitepoint</description>
     </item>
     

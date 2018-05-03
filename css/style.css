@@ -204,6 +204,9 @@ code {
   .single .post .cp_embed_wrapper {
     grid-column: 1/-1;
     height: calc(100vw * 1 / var(--pen-aspect-ratio)); }
+  .single .post .codepen {
+    font-style: italic;
+    text-align: center; }
 
 /*
  * Header

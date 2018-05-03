@@ -6,10 +6,21 @@
     <description>Recent content on mgiulio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Apr 2018 18:00:07 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 30 Apr 2018 13:44:52 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Responsive Knockout Text With Looping Video</title>
+      <link>/articles/responsive-knockout-text-looping-video/</link>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
+      
+      <guid>/articles/responsive-knockout-text-looping-video/</guid>
+      <description>In my first article on CSS-Tricks, I share some notes on the implementation of an HTML &amp;lt;video&amp;gt; playing inside the shape of some letters of a covering text:
+See this pen by @mgiulio on CodePen One of the more relevant parts in the article is the description of a workflow to create and export the text cutout in a vector editor, Inkscape in particular.
+To be noted that there is nothing special about using a video instead of an image, the process is exacly the same.</description>
+    </item>
     
     <item>
       <title>CSS font-display: The Future of Font Rendering on the Web</title>
@@ -35,7 +46,7 @@
       <pubDate>Sat, 28 Apr 2018 18:00:05 +0200</pubDate>
       
       <guid>/articles/native-dom-manipulation-methods/</guid>
-      <description>Read the full article on Sitepoint</description>
+      <description>Read it on Sitepoint</description>
     </item>
     
     <item>
@@ -44,7 +55,7 @@
       <pubDate>Sat, 28 Apr 2018 18:00:04 +0200</pubDate>
       
       <guid>/articles/building-3d-rotating-carousel-css-javascript/</guid>
-      <description>Read the full article on Sitepoint</description>
+      <description>Read it on Sitepoint</description>
     </item>
     
     <item>
@@ -53,7 +64,7 @@
       <pubDate>Sat, 28 Apr 2018 18:00:03 +0200</pubDate>
       
       <guid>/articles/event-bubbling-javascript/</guid>
-      <description>Read the full article on Sitepoint</description>
+      <description>Read it on Sitepoint</description>
     </item>
     
     <item>
@@ -80,7 +91,8 @@
       <pubDate>Sat, 28 Apr 2018 18:00:00 +0200</pubDate>
       
       <guid>/articles/smooth-scrolling-vanilla-javascript/</guid>
-      <description>Read the full article on Sitepoint</description>
+      <description>This was my forst article published on Sitepoint.
+Read</description>
     </item>
     
   </channel>

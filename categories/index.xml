@@ -13,7 +13,7 @@
     <item>
       <title>Css</title>
       <link>/categories/css/</link>
-      <pubDate>Sat, 28 Apr 2018 18:00:07 +0200</pubDate>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
       
       <guid>/categories/css/</guid>
       <description></description>
@@ -22,7 +22,7 @@
     <item>
       <title>Html</title>
       <link>/categories/html/</link>
-      <pubDate>Sat, 28 Apr 2018 18:00:06 +0200</pubDate>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
       
       <guid>/categories/html/</guid>
       <description></description>
@@ -34,6 +34,24 @@
       <pubDate>Sat, 28 Apr 2018 18:00:05 +0200</pubDate>
       
       <guid>/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sass</title>
+      <link>/categories/sass/</link>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
+      
+      <guid>/categories/sass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Svg</title>
+      <link>/categories/svg/</link>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
+      
+      <guid>/categories/svg/</guid>
       <description></description>
     </item>
     

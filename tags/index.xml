@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Clipping</title>
+      <link>/tags/clipping/</link>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
+      
+      <guid>/tags/clipping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Dom</title>
       <link>/tags/dom/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:05 +0200</pubDate>
@@ -62,6 +71,15 @@
       <pubDate>Sat, 28 Apr 2018 18:00:07 +0200</pubDate>
       
       <guid>/tags/fonts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Inkscape</title>
+      <link>/tags/inkscape/</link>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
+      
+      <guid>/tags/inkscape/</guid>
       <description></description>
     </item>
     
@@ -93,11 +111,29 @@
     </item>
     
     <item>
+      <title>Text</title>
+      <link>/tags/text/</link>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
+      
+      <guid>/tags/text/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Trello</title>
       <link>/tags/trello/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:06 +0200</pubDate>
       
       <guid>/tags/trello/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video</title>
+      <link>/tags/video/</link>
+      <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
+      
+      <guid>/tags/video/</guid>
       <description></description>
     </item>
     

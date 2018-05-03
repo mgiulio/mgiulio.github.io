@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/articles/responsive-knockout-text-looping-video/</loc>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/articles/css-font-display-future-font-rendering-web/</loc>
     <lastmod>2018-04-28T18:00:07+02:00</lastmod>
   </url>
@@ -50,7 +55,7 @@
   
   <url>
     <loc>/articles/</loc>
-    <lastmod>2018-04-28T18:00:07+02:00</lastmod>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -72,8 +77,14 @@
   </url>
   
   <url>
+    <loc>/tags/clipping/</loc>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/css/</loc>
-    <lastmod>2018-04-28T18:00:07+02:00</lastmod>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -97,7 +108,13 @@
   
   <url>
     <loc>/categories/html/</loc>
-    <lastmod>2018-04-28T18:00:06+02:00</lastmod>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/inkscape/</loc>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -120,8 +137,20 @@
   </url>
   
   <url>
+    <loc>/categories/sass/</loc>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/scrolling/</loc>
     <lastmod>2018-04-28T18:00:01+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/svg/</loc>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -132,14 +161,26 @@
   </url>
   
   <url>
+    <loc>/tags/text/</loc>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/trello/</loc>
     <lastmod>2018-04-28T18:00:06+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/tags/video/</loc>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2018-04-28T18:00:07+02:00</lastmod>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   

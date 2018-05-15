@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Playing With Pen Heights &ndash; mgiulio</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Oswald|Roboto+Mono" rel="stylesheet">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="single">
+	
+	
+<nav class="navbar">
+	<ul class="nav-links">
+		<li><a href="/articles">Articles</a></li>
+	</ul>
+</nav>
+<article class="post">
+	<header class="post-header">
+		<h1 class="post-title">Playing With Pen Heights</h1>
+		<ul class="post-cats">
+			
+				<li class="post-cat"><a class="post-cat-link" href="/categories/html">html</a></li>
+			
+				<li class="post-cat"><a class="post-cat-link" href="/categories/css">css</a></li>
+			
+		</ul>
+		<ul class="post-tags">
+			
+				<li class="post-tag"><a class="post-tag-link" href="/tags/codepen">codepen</a></li>
+			
+				<li class="post-tag"><a class="post-tag-link" href="/tags/calc">calc</a></li>
+			
+				<li class="post-tag"><a class="post-tag-link" href="/tags/viewport-units">viewport units</a></li>
+			
+				<li class="post-tag"><a class="post-tag-link" href="/tags/css-variables">css variables</a></li>
+			
+		</ul>
+	</header>
+	
+		
+
+<p>For the articles template for my new site, I wanted to have bold bleeding pens, spanning the full browser viewport width, something along these lines:</p>
+
+<p><img src="img/00.jpg" alt="bleeding pen in article layout" /></p>
+
+<p>The pens are fluid by default, expanding to fit their parent container width, but their height is fixed, you have to pick a value when you get the HTML embed code from the wizard. But keepeing the same height for every viewport width doesn&rsquo;t look so nice:</p>
+
+<p><img src="img/01.jpg" alt="pen bleeding in several viewports" /></p>
+
+<p>Yes, we can make a <a href="codepen docs">pen resizeable by the user</a>, but I did&rsquo;t need that.</p>
+
+<p>Soon I realized that what I really wanted was a full viewport width constant aspect ratio pen, a mouthful to say that the pen must span the entire viewport width but its height must adapt to preserve a prescribed aspect ratio:</p>
+
+<p><img src="img/02.jpg" alt="Bleeding pens with constant aspect ratio" /></p>
+
+<p>Ok, this looks better, but on a large viewport the pen can become too huge, both in with and in height. Maybe it could even overflow the browser viewport and that&rsquo;s bad:</p>
+
+<p><img src="img/03.jpg" alt="overflowing pen" /></p>
+
+<p>So, what about preventing this by limiting the maximum width of a pen?</p>
+
+<p><img src="img/04.jpg" alt="limited pen, centered in the viewport" /></p>
+
+<p>Definitely better. And while we are here, why don&rsquo;t we let the pen cover a prescribed fraction of the viewport width?</p>
+
+<p><img src="img/05.jpg" alt="500vh pen" /></p>
+
+<p>In particular we could have even full viewport pens:</p>
+
+<p><img src="img/06.jpg" alt="full viewport pen" /></p>
+
+<p>Enough doodling, here&rsquo;s a demo that shows all these kinds of pens:</p>
+
+<p>[The pen]()</p>
+
+<p>Before seeing how to implemtent this, let&rsquo;s take a look at the embedding code for a pen.</p>
+
+<h2 id="anatomy-of-a-pen-embed">Anatomy of a pen embed</h2>
+
+<p>The HTML markup we get from the wizard looks like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- embed code here --&gt;</span></code></pre></div>
+
+<p>See that <code>data-height</code> attribute in the first snippet? It&rsquo;s filled with the height value got from the wizard.</p>
+
+<p>When the page loads the<code>script</code> gets loaded and replaces the above snippet with the real pen markup, which consists in a wrapped <code>iframe</code>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">...</code></pre></div>
+
+<p>whose height is set with the value found in the data-height attribute.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">cp_embed_wrapper</span> <span style="color:#f92672">iframe</span> {
+	<span style="color:#66d9ef">height</span>: <span style="color:#f92672">...</span>;
+}</code></pre></div>
+
+<p>This is the spot we are going to override to customize the pen&rsquo;s heights.</p>
+
+<h2 id="full-viewport-width-pens-with-constant-aspect-ratio">Full viewport width pens with constant aspect ratio</h2>
+
+<p>Let&rsquo;s begin by introducing a couple of CSS classes to specify our custom pens, <code>pen</code> and <code>pen--full-vp-width</code>.</p>
+
+<p>As just seen, the embed code is replaced by javascript so we are going to wrap the embed code in a container and apply the classes to this element:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pen pen--full-vp-width&#34;</span>&gt;
+	<span style="color:#75715e">&lt;!-- pen code --&gt;</span>
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+
+<p>We assign the following properties to the classes:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">pen</span> {
+	--aspect-ratio: calc(<span style="color:#ae81ff">21</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>);
+}
+
+.<span style="color:#a6e22e">pen--full-vp-width</span> .<span style="color:#a6e22e">cp_embed_wrapper</span> <span style="color:#f92672">iframe</span> {
+	<span style="color:#66d9ef">height</span>: calc(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>aspect<span style="color:#f92672">-</span>ratio));
+}</code></pre></div>
+
+<p>In the .pen class we specify a default aspect ratio with a CSS variable. I picked a 21:9 value, meaning that the pen width and height will respect the proportion <code>width : height = 21 : 9</code>. This default ratio can be overridden for each pen as needed as we&rsquo;ll see in a moment.</p>
+
+<p>Given the aspect ratio value, we can set the correct height value with calc(), just using the above proportion. The pen is always as large as the viewport so, using the viewport units, we get that <code>100vw : height = 21 : 9</code>, or, using the CSS variable, <code>100vw : height = var(--aspect-ratio)</code>, from which w get that <code>height = 100vw * 1 / var(--aspect-ratio)</code>.</p>
+
+<p>To specify a different aspect ratio we can override the default value using inline styles:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pen pen--full-vp-width&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--aspect-ratio: calc(2 / 1);&#34;</span>&gt;
+	<span style="color:#75715e">&lt;!-- embed markup here --&gt;</span>
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+
+<p>We&rsquo;re done. Almost. If you take your time to measure the pens, you can see that sometimes the prescribed aspect ratio is not exactly met. This happens when the browser vertical scrollbar is visible. In this case, the scrollbar is rendered inside the viewport area, but while the pen width reduces to account for the scrollbar, the 100vw value still refers to the entire viewport width instead, [like if the scrollbar was not there](), and this little difference between the pen real width and the reported viewort width causes a little error in the height calculation. Anyway, visually this error is not noticeable and we&rsquo;are completely happy with it.</p>
+
+<p>Another picky observation about the sizes is that the iframe parent element, .code_embed, has not the same exact height as it child. This is because the iframe <code>display</code> mode is <code>inline</code>, so some pixels are added to the height of its parent. Again, not a big issue, we could overlook it, but just to be clean , we can get rid of that extra pixels simply by ovverriding the iframe display mode:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">pen--full-vp-width</span> .<span style="color:#a6e22e">cp_embed_wrapper</span> <span style="color:#f92672">iframe</span> {
+	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+	<span style="color:#75715e">/* ... */</span>
+}</code></pre></div>
+
+<p>So, we get it, a nice constant aspect ratio pen, chech its behavior in the demo pen.</p>
+
+<h2 id="limiting-the-width">Limiting the width</h2>
+
+<p>Not surpisingly, we can use the max-width property to limit the <code>.pen</code> container:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">pen</span> {
+	<span style="color:#960050;background-color:#1e0010">...</span>
+	--maxwidth: <span style="color:#ae81ff">99999</span><span style="color:#66d9ef">px</span>;
+	<span style="color:#66d9ef">max-width</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>max<span style="color:#f92672">-</span>width);
+	<span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#66d9ef">auto</span>;
+}</code></pre></div>
+
+<p>Again, we used a CSS variable for the target maximum width. A very large dummy values is used as a flag to indicate that a pen must bleed edge to edge by default. To limit the pen width we can override this value with inline styles:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pen pen--full-vp-width&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--aspect-ratio: calc(16 / 9); --max-width: 1000px;&#34;</span>&gt;
+	<span style="color:#75715e">&lt;!-- pen code --&gt;</span>
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+
+<p>The <code>auto</code> margins make sure the pen will be horizontally centered.</p>
+
+<p>Now the pen doesn&rsquo;t exceed the prescribed width, but its aspect ratio is not preserved anymore. This is because in the calc() formula for the height property, viewport units were used. So, as long as the pen has the same width as the viewport the formula is correct, bt as soon as the viewport grows larger of the maximum pen width, the 100vw represents a value larger than the real pen width, and so the comupted pen height is bigger of what it should be. What we want instead,  is to stop growing the height when the pen reach its maxium width, and we can get this by adding a <code>max-height</code> property to the <code>iframe</code>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">pen--full-vp-width</span> .<span style="color:#a6e22e">cp_embed_wrapper</span> <span style="color:#f92672">iframe</span> {
+	<span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+	<span style="color:#66d9ef">height</span>: calc(<span style="color:#ae81ff">100</span><span style="color:#66d9ef">vw</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>aspect<span style="color:#f92672">-</span>ratio));
+	<span style="color:#66d9ef">max-height</span>: calc(<span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>max<span style="color:#f92672">-</span>width) <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>aspect<span style="color:#f92672">-</span>ratio));
+}</code></pre></div>
+
+<p>We took the cacl() formula for the height and replaced the 100vw factor with the target maximum width, obtainig the correct height value corrispondent to that max width and for the current aspect datio.</p>
+
+<p>Finally, this formula works even for a bleeding pen, because the very large default value used for <code>--max-width</code> implies a very large <code>max-height</code> that in practice doesn&rsquo;t limit the the pen height at all.</p>
+
+<h2 id="full-or-partial-viewport-height-pens">Full(or partial) viewport height pens</h2>
+
+<p>As before, let&rsquo;s first introduce a new CSS class for these pens, let&rsquo;s call it <code>pen--vp-height</code>:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pen pen--vp-height&#34;</span>&gt;
+	<span style="color:#75715e">&lt;!-- Pen --&gt;</span>
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+
+<p>And, once again, let&rsquo;s resort to a CSS variable to specify the default height for this kind of pens:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">pen--vp-height</span> {
+	--vp-height: <span style="color:#ae81ff">100</span><span style="color:#66d9ef">vh</span>;
+}</code></pre></div>
+
+<p>This way we have a pen covering the entire browser viewport. To customize the height this for a given pen, inline styles may help us one more time:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pen pen--vp-height&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;--vp-height: 50vh;&#34;</span>&gt;
+	<span style="color:#75715e">&lt;!-- Pen --&gt;</span>
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+
+<p>The CSS for the iframe is the simplest so far:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">pen--vp-height</span> .<span style="color:#a6e22e">cp_embed_wrapper</span> <span style="color:#f92672">iframe</span> {
+	<span style="color:#66d9ef">height</span>: <span style="color:#a6e22e">var</span>(<span style="color:#f92672">--</span>vp<span style="color:#f92672">-</span>height);
+}</code></pre></div>
+
+<p>That&rsquo;s it!</p>
+
+<h2 id="support">Support</h2>
+
+<p>The majority of recent versions of desktop and mobile browsers have not problems with the CSS features employed.
+Internet Explorer 11 supports <a href="caniuse">calc()</a> and <a href="canisue">viewport units</a> but not <a href="caniuse">CSS variables</a>.</p>
+
+<h2 id="references">References</h2>
+
+<p>Here are some info from the CodePen documentation about embedding pens and sizing them:</p>
+
+<ul>
+<li><a href="https://blog.codepen.io/documentation/features/embedded-pens/">https://blog.codepen.io/documentation/features/embedded-pens/</a></li>
+<li><a href="https://blog.codepen.io/2014/03/11/resizeable-embeds/">https://blog.codepen.io/2014/03/11/resizeable-embeds/</a></li>
+<li><a href="https://blog.codepen.io/2017/05/01/make-embedded-pen-resizeable/">https://blog.codepen.io/2017/05/01/make-embedded-pen-resizeable/</a></li>
+</ul>
+
+	
+</article>
+
+<section class="comments">
+	<div id="disqus_thread"></div>
+	<script>
+		var disqus_config = function () {
+			
+			
+		};
+		(function() {
+			var d = document, s = d.createElement('script');
+			s.src = 'https://mgiulio.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>                            
+
+</body>
+</html>

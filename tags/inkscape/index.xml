@@ -22,16 +22,5 @@ See this pen by @mgiulio on CodePen One of the more relevant parts in the artic
 To be noted that there is nothing special about using a video instead of an image, the process is exacly the same.</description>
     </item>
     
-    <item>
-      <title>A Responsive See-through Cutout Text Video Effect</title>
-      <link>/articles/responsive-cutout-video/</link>
-      <pubDate>Tue, 20 Mar 2018 20:06:19 +0100</pubDate>
-      
-      <guid>/articles/responsive-cutout-video/</guid>
-      <description>In this article I would like to share some notes on the implementation of an HTML video element playing &amp;lsquo;inside&amp;rsquo; the letters of a covering text, as shown in the following pen:
-Basic pen
-One key objective was to develop a responsive component, in order to make not only the video scale up and down to fit its parent container, but also to scale the text preserving its size relationship with the underlying video.</description>
-    </item>
-    
   </channel>
 </rss>

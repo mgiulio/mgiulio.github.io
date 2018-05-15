@@ -30,15 +30,6 @@
     </item>
     
     <item>
-      <title>Calc</title>
-      <link>/tags/calc/</link>
-      <pubDate>Thu, 10 May 2018 17:09:40 +0200</pubDate>
-      
-      <guid>/tags/calc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Carousel</title>
       <link>/tags/carousel/</link>
       <pubDate>Sat, 28 Apr 2018 18:00:04 +0200</pubDate>
@@ -53,24 +44,6 @@
       <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
       
       <guid>/tags/clipping/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Codepen</title>
-      <link>/tags/codepen/</link>
-      <pubDate>Thu, 10 May 2018 17:09:40 +0200</pubDate>
-      
-      <guid>/tags/codepen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Css Variables</title>
-      <link>/tags/css-variables/</link>
-      <pubDate>Thu, 10 May 2018 17:09:40 +0200</pubDate>
-      
-      <guid>/tags/css-variables/</guid>
       <description></description>
     </item>
     
@@ -161,15 +134,6 @@
       <pubDate>Mon, 30 Apr 2018 13:44:52 +0200</pubDate>
       
       <guid>/tags/video/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Viewport Units</title>
-      <link>/tags/viewport-units/</link>
-      <pubDate>Thu, 10 May 2018 17:09:40 +0200</pubDate>
-      
-      <guid>/tags/viewport-units/</guid>
       <description></description>
     </item>
     

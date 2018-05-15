@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/articles/bleeding-pens/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/articles/responsive-knockout-text-looping-video/</loc>
     <lastmod>2018-04-30T13:44:52+02:00</lastmod>
   </url>
@@ -53,11 +48,6 @@
   </url>
   
   <url>
-    <loc>/articles/responsive-cutout-video/</loc>
-    <lastmod>2018-03-20T20:06:19+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/3d/</loc>
     <lastmod>2018-04-28T18:00:04+02:00</lastmod>
     <priority>0</priority>
@@ -65,19 +55,13 @@
   
   <url>
     <loc>/articles/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/bootstrap/</loc>
     <lastmod>2018-04-28T18:00:02+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/calc/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -99,20 +83,8 @@
   </url>
   
   <url>
-    <loc>/tags/codepen/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/css/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/css-variables/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -136,7 +108,7 @@
   
   <url>
     <loc>/categories/html/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -207,14 +179,8 @@
   </url>
   
   <url>
-    <loc>/tags/viewport-units/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/</loc>
-    <lastmod>2018-05-10T17:09:40+02:00</lastmod>
+    <lastmod>2018-04-30T13:44:52+02:00</lastmod>
     <priority>0</priority>
   </url>
   
